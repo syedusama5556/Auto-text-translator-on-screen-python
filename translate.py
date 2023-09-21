@@ -7,7 +7,7 @@ import tkinter as tk
 import keyboard
 
 # Set the Tesseract executable path (adjust this path to your Tesseract installation)
-pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
 # Function to display the translated text in an overlay window with dynamic dimensions and text wrapping
 def display_translated_text(translation_en):
