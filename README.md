@@ -1,0 +1,1 @@
+# Auto-text-translator-on-screen-python
