@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import platform
 # Define a function 'text' that takes an argument 'n'
 def text(n):
 
@@ -12,8 +12,10 @@ def text(n):
     label.master.geometry("+512+312")     # Set window position
     label.master.lift()                   # Bring the window to the front
     label.master.attributes("-topmost", True)  # Keep the window on top of others
-    label.master.attributes("-disabled", True)  # Disable the window interaction
-    label.master.attributes("-transparentcolor", "white")  # Make the background white transparent
+    #if mac not run
+    if(platform.system()!='Darwin'):
+     label.master.attributes("-disabled", True)  # Disable the window interaction 
+     label.master.attributes("-transparentcolor", "white")  # Make the background white transparent
 
     # Schedule window destruction after 1006 milliseconds (approximately 1 second)
     label.after(2000, label.master.destroy)

@@ -1,3 +1,4 @@
+import platform
 import pytesseract
 import pyautogui
 import re
@@ -33,8 +34,9 @@ def display_translated_text(translation_en):
 
     label.master.lift()                   # Bring the window to the front
     label.master.attributes("-topmost", True)  # Keep the window on top of others
-    label.master.attributes("-disabled", True)  # Disable the window interaction
-    label.master.attributes("-transparentcolor", "white")  # Make the background white transparent
+    if platform.system() != 'Darwin':
+        label.master.attributes("-disabled", True)  # Disable the window interaction
+        label.master.attributes("-transparentcolor", "white")  # Make the background white transparent
 
     # Schedule window destruction after 5 seconds
     label.after(5000, root.destroy)
