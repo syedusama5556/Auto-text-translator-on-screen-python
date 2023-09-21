@@ -20,7 +20,7 @@ def display_translated_text(translation_en):
 
     # Calculate the position to center the window just above the Start menu
     window_width = 0.8 * screen_width  # Adjust as needed
-    window_height = 0.1 * screen_height  # Adjust as needed
+    window_height = 0.2 * screen_height  # Adjust as needed
     x_position = int((screen_width - window_width) // 2)
     y_position = int(screen_height - window_height - 100)  # 40 pixels above the Start menu
 
@@ -108,7 +108,7 @@ while True:
 
                 # Create a text widget on the canvas with dynamic dimensions
                 display_translated_text(translated_text)
-                pyautogui.sleep(1)
+                pyautogui.sleep(3)
 
             t_pressed = False  # Reset 't' key flag after processing
             processing = False
