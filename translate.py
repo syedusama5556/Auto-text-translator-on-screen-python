@@ -43,7 +43,6 @@ def display_translated_text(translation_en):
     # Start the tkinter main loop
     root.mainloop()
 
-
 # Define the region to capture (adjust as needed)
 capture_region = (0, 0, 2413, 1332)  # Captures a limited area (300 pixels in height)
 
@@ -65,7 +64,8 @@ def on_t_key_event(e):
         if e.name == 't':
             t_pressed = False
 
-keyboard.on_press_key('t', on_t_key_event)  # Register 't' key press event
+# Start listening for 't' key events globally
+keyboard.on_press_key('t', on_t_key_event, suppress=True)
 
 # Add a delay to control the frequency of screen captures
 print('Running in BG')
