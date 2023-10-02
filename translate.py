@@ -90,7 +90,7 @@ while True:
 
             # Find all matches in the extracted text
             matches = combined_regex.findall(extracted_text)
-
+            all_japanese_text = ""
             if matches:
                 print("Matches:")
                 for match in matches:
@@ -117,3 +117,6 @@ while True:
 
     except Exception as e:
         print(f"Error: {str(e)}")
+
+
+        #convert kanji to hiragan before transation
